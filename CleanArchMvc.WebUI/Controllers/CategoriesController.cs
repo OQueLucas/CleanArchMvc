@@ -27,15 +27,15 @@ namespace CleanArchMvc.WebUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CategoryDTO category)
+        public IActionResult Create(CategoryDTO categoryDto)
         {
             if(ModelState.IsValid)
             {
-                _categoryService.Add(category);
+                _categoryService.Add(categoryDto);
                 return RedirectToAction(nameof(Index));
             }
 
-            return View();
+            return View(categoryDto);
         }
 
         [HttpGet()]
