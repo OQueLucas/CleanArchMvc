@@ -23,7 +23,7 @@ namespace CleanArchMvc.Infra.Data.Identity
                 user.NormalizedEmail = "USUARIO@LOCALHOST";
                 user.NormalizedUserName = "USUARIO@LOCALHOST";
                 user.EmailConfirmed = true;
-                user.LockoutEnd = false;
+                user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
 
                 IdentityResult result = _userManager.CreateAsync(user, "Numsey#2021").Result;
@@ -42,7 +42,7 @@ namespace CleanArchMvc.Infra.Data.Identity
                 user.NormalizedEmail = "ADMIN@LOCALHOST";
                 user.NormalizedUserName = "ADMIN@LOCALHOST";
                 user.EmailConfirmed = true;
-                user.LockoutEnd = false;
+                user.LockoutEnabled = false;
                 user.SecurityStamp = Guid.NewGuid().ToString();
 
                 IdentityResult result = _userManager.CreateAsync(user, "Numsey#2021").Result;
