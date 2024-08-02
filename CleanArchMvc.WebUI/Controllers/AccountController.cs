@@ -48,7 +48,7 @@ namespace CleanArchMvc.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegisterUser(RegisterViewModel model)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var result = await _authenticate.Authenticate(model.Email, model.Password);
 
