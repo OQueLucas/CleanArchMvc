@@ -11,6 +11,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructureAPI(builder.Configuration);
 
+// Ativar autenticação e validar o token
+builder.Services.AddInfrastructureJWT(builder.Configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
